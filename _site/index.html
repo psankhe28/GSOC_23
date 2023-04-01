@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d07d72355b93beb3027cbaddcfa9dc3bf600e671">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Gearing up for GSoC 2023 | March 30, 2023</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Gearing up for GSoC 2023" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="March 30, 2023" />
+<meta property="og:description" content="March 30, 2023" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Gearing up for GSoC 2023" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Gearing up for GSoC 2023" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"March 23, 2023","headline":"Gearing up for GSoC 2023","name":"Gearing up for GSoC 2023","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Gearing up for GSoC 2023</h1>
+        </a>
+        <h2>March 30, 2023</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/psankhe28/GSOC_23" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <p>Hey, my name is Pratiksha Sankhe and I study at VJTI in Mumbai. This is the first time applying for GSoC. After researching a wide range of organisations and learning about their initiatives, I discovered the “<em>Collection and Study Management</em>” project of <strong>caMicroscope</strong> to be pretty fascinating.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>I joined Slack and began delving more into the projects. I finished the setup locally and started working on the coding challenge task listed under my project. This blog will summarise my approach to finishing the code challenge assignment.</p>
+
+<h2 id="getting-warmed-up">Getting Warmed up</h2>
+<p>Each project included a code challenge assignment for new contributors to demonstrate their inventiveness, comprehension of the topic, and ability to execute on a project proposal. I, too, began to comprehend and apply it.</p>
+
+<h3 id="1-building-camicroscope-and-running-it-locally">1. Building caMicroscope and running it locally</h3>
+<ul>
+  <li>First I followed the <a href="https://github.com/camicroscope/caMicroscope#hosted-setup">Getting Started</a> section on caMicroscope's repository, which involved installing it using docker. I was able to successfully build and test its working on my PC.
+  <li>Then, I started exploring the different pages and finding bugs in the pages of <a href="https://github.com/camicroscope/caMicroscope">caMicroscope</a> repository and <a href="https://github.com/camicroscope/camicroscope.github.io">camicroscope.github.io</a> repository.
+  <li>Following are the PRs that I have raised till date:
+      In <a href="https://github.com/camicroscope/camicroscope.github.io">camicroscope.github.io</a>:<br/>
+      ● <a href="https://github.com/camicroscope/camicroscope.github.io/pull/23">Scroll to top feature added</a><br/>
+      ● <a href="https://github.com/camicroscope/camicroscope.github.io/pull/23">Improved the Index and the Community Page</a><br/>
+      ● <a href="https://github.com/camicroscope/camicroscope.github.io/pull/27">Changed link of navbar</a><br/>
+      ● <a href="https://github.com/camicroscope/camicroscope.github.io/pull/28">Created README</a><br/><br/>
+    
+      In <a href="https://github.com/camicroscope/caMicroscope">caMicroscope</a>:<br/>
+      ● <a href="https://github.com/camicroscope/caMicroscope/pull/619">Landing page UI modified</a><br/>
+      ● <a href="https://github.com/camicroscope/caMicroscope/pull/620">Fixed UI of admin page</a><br/><br/>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="2-a-simple-webapp-demonstrating-crud-operations">2. A simple webapp demonstrating CRUD operations</h3>
+<ul>
+  <li>As I already made similar application using MERN Stack which performed CRUD operations, this was a fairly easy task for me.I created a react-app and then installed the dependencies required for creating stories.</li>
+  <div class="language-plaintext highlighter-rouge">
+    <div class="highlight"><pre class="highlight"><code>npx create-react-app notebook
+  </code></pre></div></div>
+  <li>I decided to create a 'backend' folder and initialize the application.
+    <div class="language-plaintext highlighter-rouge">
+      <div class="highlight"><pre class="highlight"><code>npm init -y
+    </code></pre></div></div>
+  </li>
+  <li>My next target was to build models for User and Notes.</li>
+  <li>For authentication, I made use of jsonwebtoken and bcrypt.js for hashing passwords.</li>
+  <li>The next step which I performed was created the routes for authentication as well as notes which included POST, GET, PUT and DELETE requests.
+  <li>Finally I created routes and tested it. Tadaa! Everything was working fine.</li>
+  <li>The backend was running smoothly and now the only part remaining was frontend.</li>
+  <li>For keeping things simple, I used Bootstrap and use the already built forms for signup, login and adding and updating notes.</li>
+  <li>I used the navbar which was already available in Bootstrap.
+  <li>To connect the backend with frontend, I made use of Context and using it, I successfully completed the task.</li>
+  <li>A cloud-based note application was created successfully.</li>
+  <li><a href="https://github.com/psankhe28/notebook">GitHub</a></li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="3-creating-url-storing-website">3. Creating URL Storing Website - UrlSafe</h3>
+<ul>
+  <li>After reading about project description and creating a simple CRUD operation website, I thought of creating a website which somewhat is a mini version of our project.</li>
+  <li>So, I decided to make a website which utilizes the concept of collection and tags and I came up with the idea of UrlSafe.</li>
+  <li>UrlSafe is a bookmark + archive manager to collect, and save websites for offline use.</li>
+  <li>Some of the key features are as folows:<br/>
+    - Sleek, minimalist design.<br/>
+    - 🌤 Dark/Light mode support.<br/>
+    - ↔️ Responsive design.<br/>
+    - 🔎 Search, filter and sorting functionality.<br/>
+    - 🏷 Set multiple tags to each link.<br/>
+    - 🗂 Assign each link to a collection where we can further group links.<br/>
+  </li>
+  <li>  In "Collection and Study Management" project too, we have to implement collection and tag feature which would be similar to this. </li>
+  <li> This website is built using MERN Stack</li>
+  <li><a href="https://github.com/psankhe28/url-safe">GitHub</a></li>
+<li><a href="https://drive.google.com/file/d/1Xxid1e_21QboV5qEOD8416jSBDrxmxtJ/view">Demo Video</a></li>
+</ul>
+      </section>
+    </div>
+  </body>
+</html>
